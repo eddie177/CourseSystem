@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.Button Exit_bt;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.Button button2;
             this.MovingPanel = new System.Windows.Forms.Panel();
             this.ProgramName_lb = new System.Windows.Forms.Label();
             this.Name_tb = new System.Windows.Forms.TextBox();
@@ -55,9 +56,19 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             Exit_bt = new System.Windows.Forms.Button();
+            button2 = new System.Windows.Forms.Button();
             this.MovingPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // Exit_bt
+            // 
+            Exit_bt.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(Exit_bt, "Exit_bt");
+            Exit_bt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            Exit_bt.Name = "Exit_bt";
+            Exit_bt.UseVisualStyleBackColor = true;
+            Exit_bt.Click += new System.EventHandler(this.Exit_bt_Click);
             // 
             // MovingPanel
             // 
@@ -187,15 +198,6 @@
             resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
             this.dateTimePicker1.Name = "dateTimePicker1";
             // 
-            // Exit_bt
-            // 
-            Exit_bt.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(Exit_bt, "Exit_bt");
-            Exit_bt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            Exit_bt.Name = "Exit_bt";
-            Exit_bt.UseVisualStyleBackColor = true;
-            Exit_bt.Click += new System.EventHandler(this.Exit_bt_Click);
-            // 
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
@@ -204,10 +206,20 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            button2.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(button2, "button2");
+            button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            button2.Name = "button2";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(Exit_bt);
             this.Controls.Add(this.dateTimePicker1);
